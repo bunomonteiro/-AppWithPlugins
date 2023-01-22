@@ -22,9 +22,10 @@ Plugins
 |    └─── AppWithPlugins.Plugin.Multiplier.dll
 |   
 └─── AppWithPlugins.Plugin.Divider
-     └─── AppWithPlugins.Plugin.Divider.dll
-
-
+|    └─── AppWithPlugins.Plugin.Divider.dll
+|   
+└─── Any.other.plugin.name
+     └─── Any.other.plugin.name.dll
 ```
 
 You can put all the output, but only the project dll is needed.
