@@ -24,12 +24,15 @@ namespace AppWithPlugins.Cli
 
     private static void RemoveContractConflicts(IEnumerable<string> pluginsDirectories)
     {
-      string? contractAssemblyName = Path.GetFileName(typeof(ICommand).Assembly.GetName().CodeBase);
+      string contractAssemblyName = Path.GetFileName(typeof(ICommand).Assembly.Location);
+      string rootContractAssemblyName = Path.Combine(Environment.CurrentDirectory, contractAssemblyName!);
 
       if(contractAssemblyName != null)
       {
         pluginsDirectories.Where(x =>
-        Path.GetFileName(x).Equals(contractAssemblyName)).ToList().ForEach(File.Delete);
+          !rootContractAssemblyName.Equals(x)
+          && Path.GetFileName(x).Equals(contractAssemblyName)          
+        ).ToList().ForEach(File.Delete);
       }
     }
 
