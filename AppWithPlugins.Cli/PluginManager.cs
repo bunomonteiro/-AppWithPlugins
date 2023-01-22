@@ -25,7 +25,7 @@ namespace AppWithPlugins.Cli
     private static void RemoveContractConflicts(IEnumerable<string> pluginsDirectories)
     {
       string contractAssemblyName = Path.GetFileName(typeof(ICommand).Assembly.Location);
-      string rootContractAssemblyName = Path.Combine(Environment.CurrentDirectory, contractAssemblyName!);
+      string rootContractAssemblyName = Path.Combine(Environment.CurrentDirectory, contractAssemblyName);
 
       if(contractAssemblyName != null)
       {
