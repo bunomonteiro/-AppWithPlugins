@@ -4,10 +4,27 @@ Put the plugins in their respective directories here.
 > Plugins are the output of the class library build
 
 Example:
-	<src>/Plugins/AppWithPlugins.Plugin.Adder/AppWithPlugins.Plugin.Adder.deps.json
-	<src>/Plugins/AppWithPlugins.Plugin.Adder/AppWithPlugins.Plugin.Adder.dll
-	<src>/Plugins/AppWithPlugins.Plugin.Adder/AppWithPlugins.Plugin.Adder.pdb
-	<src>/Plugins/AppWithPlugins.Plugin.Adder/AppWithPlugins.Plugins.Contracts.dll
-	<src>/Plugins/AppWithPlugins.Plugin.Adder/AppWithPlugins.Plugins.Contracts.pdb
+```
+Plugins
+│    Readme.md
+│
+└─── AppWithPlugins.Plugin.Adder
+│    └─── AppWithPlugins.Plugin.Adder.deps.json
+│    └─── AppWithPlugins.Plugin.Adder.dll
+│    └─── AppWithPlugins.Plugin.Adder.pdb
+│    └─── AppWithPlugins.Plugins.Contracts.dll
+│    └─── AppWithPlugins.Plugins.Contracts.pdb
+│   
+└─── AppWithPlugins.Plugin.Subtractor
+|    └─── AppWithPlugins.Plugin.Subtractor.dll
+|   
+└─── AppWithPlugins.Plugin.Multiplier
+|    └─── AppWithPlugins.Plugin.Multiplier.dll
+|   
+└─── AppWithPlugins.Plugin.Divider
+     └─── AppWithPlugins.Plugin.Divider.dll
+
+
+```
 
 You can put all the output, but only the project dll is needed.
